@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/animals/update" method="post">
+        <label>ID:</label> <input type="text" id="animalId" name="animalId" data-th-value="${animal.animalId}">
+        <label>Name:</label> <input type="text" id="name" name="name" data-th-value="${animal.name}">
+        <label>Scientific Name:</label> <input type="text" id="scientificName" name="scientificName" data-th-value="${animal.scientificName}">
+        <label>Species:</label> <input type="text" id="species" name="species" data-th-value="${animal.species}">
+        <label>Habitat:</label> <input type="text" id="habitat" name="habitat" data-th-value="${animal.habitat}">
+        <label>Description:</label> <input type="text" id="description" name="description" data-th-value="${animal.description}">
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

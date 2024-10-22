@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Details</title>
+</head>
+<body>
+    <h1 data-th-text="${title}"></h1>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Scientific Name</td>
+            <td>Species</td>
+            <td>Habitat</td>
+            <td>Description</td>
+        </tr>
+        <tr>
+            <td data-th-text="${animal.name}"></td>
+            <td data-th-text="${animal.scientificName}"></td>
+            <td data-th-text="${animal.species}"></td>
+            <td data-th-text="${animal.habitat}"></td>
+            <td data-th-text="${animal.description}"></td>
+        </tr>
+    </table>
+</body>
+</html>
