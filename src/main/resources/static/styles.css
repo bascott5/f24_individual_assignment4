@@ -1,0 +1,29 @@
+body {
+    background-color: bisque;
+}
+
+table {
+    margin: 0 auto;
+    width: 50%;
+}
+
+td, th {
+    text-align: center;
+    padding: 10px 25px;
+}
+
+th {
+    background-color: yellowgreen;
+}
+
+tr {
+    background-color: lightgrey;
+}
+
+tr:nth-child(odd) {
+    background-color: whitesmoke;
+}
+
+.attributes {
+    font-weight: bold;
+}

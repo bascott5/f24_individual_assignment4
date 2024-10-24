@@ -56,24 +56,15 @@ public class AnimalController {
         return "redirect:/animals/all";
     }
 
-    @DeleteMapping("/delete/{animalId}")
-    public List<Animal> deleteAnimal(@PathVariable int animalId) {
-        service.deleteAnimal(animalId);
-        return service.getAllAnimals();
-    }
-
-    @GetMapping("/species/{species}")
-    public String getAnimalsBySpecies(@PathVariable String species, Model model) {
-        model.addAttribute("speciesList", service.getAnimalsBySpecies(species));
-        model.addAttribute("title", species);
-        return "animal-list";
-    }
-
-    @GetMapping("/search/{string}")
-    public String searchAnimal(@PathVariable String string, Model model) {
-        model.addAttribute("searchList", service.searchAnimal(string));
+    @PostMapping("/search")
+    public String searchAnimal(String string, Model model) {
+        model.addAttribute("animalList", service.searchAnimal(string));
         model.addAttribute("title", string);
-        return "animal-list";
+        if (string == "") {
+            return "redirect:/animals/all";
+        } else {
+            return "animal-list";
+        }
     }
 
 }

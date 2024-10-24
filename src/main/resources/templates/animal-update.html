@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Update Animal</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <form action="/animals/update" method="post">
-        <label>ID:</label> <input type="text" id="animalId" name="animalId" data-th-value="${animal.animalId}">
         <label>Name:</label> <input type="text" id="name" name="name" data-th-value="${animal.name}">
         <label>Scientific Name:</label> <input type="text" id="scientificName" name="scientificName" data-th-value="${animal.scientificName}">
         <label>Species:</label> <input type="text" id="species" name="species" data-th-value="${animal.species}">

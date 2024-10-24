@@ -3,19 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animal Details</title>
+    <title>All Animals</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+    <form action="/animals/search" method="post">
+        <input type="text" id="string" name="string">
+        <button type="submit">Enter</button>
+    </form>
     <h1 data-th-text="${title}"></h1>
     <table>
-        <tr>
-            <td>Name</td>
-            <td>Scientific Name</td>
-            <td>Species</td>
-            <td>Habitat</td>
-            <td>Description</td>
+        <tr class="attributes">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Scientific Name</th>
+            <th>Species</th>
+            <th>Habitat</th>
+            <th>Description</th>
+            <th></th>
+            <th></th>
         </tr>
         <tr data-th-each="animal : ${animalList}">
+            <td ><a th:href="(${animal.animalId})" data-th-text="${animal.animalId}"></a></td>
             <td data-th-text="${animal.name}"></td>
             <td data-th-text="${animal.scientificName}"></td>
             <td data-th-text="${animal.species}"></td>
@@ -25,5 +34,6 @@
             <td><a th:href="(@{delete/} + ${animal.animalId})">Delete</a></td>
         </tr>
     </table>
+    <a href="/animals/createForm">+Add Animal</a>
 </body>
 </html>

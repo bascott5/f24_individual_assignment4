@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animal Details</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <h1 data-th-text="${title}"></h1>
     <table>
         <tr>
-            <td>Name</td>
-            <td>Scientific Name</td>
-            <td>Species</td>
-            <td>Habitat</td>
-            <td>Description</td>
+            <th>Name</th>
+            <th>Scientific Name</th>
+            <th>Species</th>
+            <th>Habitat</th>
+            <th>Description</th>
         </tr>
         <tr>
             <td data-th-text="${animal.name}"></td>
@@ -23,5 +24,6 @@
             <td data-th-text="${animal.description}"></td>
         </tr>
     </table>
+    <a href="/animals/all">Back</a>
 </body>
 </html>
